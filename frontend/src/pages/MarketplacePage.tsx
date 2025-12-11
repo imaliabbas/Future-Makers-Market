@@ -42,7 +42,7 @@ const MarketplacePage = () => {
           ...p,
           product_id: p._id,
           photo_urls: (p.images || []).map((url: string) =>
-            url.startsWith('http') ? url : `http://localhost:8000${url}`
+            url.startsWith('http') ? url : `https://future-makers-market-backend.onrender.com${url}`
           ),
           quantity_available: p.quantity,
           storefront_name: p.storefront_name

@@ -78,7 +78,7 @@ const MyProductsPage = () => {
             price: p.price,
             quantity_available: p.quantity,
             photo_urls: (p.images || []).map((url: string) =>
-                url.startsWith('http') ? url : `http://localhost:8000${url}`
+                url.startsWith('http') ? url : `https://future-makers-market-backend.onrender.com${url}`
             ),
             // Mapping extra fields if backend returns them, or defaults
             created_date: new Date().toISOString(),

@@ -88,7 +88,7 @@ const ProductDetailsPage = () => {
                     setProductPrice(p.price);
                     setProductQuantity(p.quantity); // Note: backend uses 'quantity'
                     setProductPhotos((p.images || ["/placeholder.svg"]).map((url: string) =>
-                        url.startsWith('http') || url === "/placeholder.svg" ? url : `http://localhost:8000${url}`
+                        url.startsWith('http') || url === "/placeholder.svg" ? url : `https://future-makers-market-backend.onrender.com${url}`
                     ));
                     setProductImageNames(p.image_names || []);
                     setProductSize(p.size || "");
@@ -310,7 +310,7 @@ const ProductDetailsPage = () => {
                                     headers: { "Content-Type": "multipart/form-data" }
                                 });
                                 // Use the full URL if needed, but backend returns relative path
-                                const imageUrl = `http://localhost:8000${res.data.url}`;
+                                const imageUrl = `https://future-makers-market-backend.onrender.com${res.data.url}`;
                                 setProductPhotos([imageUrl]);
                                 setProductImageNames([res.data.filename]);
                                 toast.dismiss(toastId);

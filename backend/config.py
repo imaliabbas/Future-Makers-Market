@@ -12,7 +12,8 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5137",
         "http://127.0.0.1:5138",
-        "http://127.0.0.1:5139"
+        "http://127.0.0.1:5139",
+        "https://future-makers-market.onrender.com"
     ]
     SECRET_KEY: str = "your-secret-key-here" # Change in production
     ALGORITHM: str = "HS256"

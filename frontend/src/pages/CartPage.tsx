@@ -57,7 +57,7 @@ const CartPage = () => {
             {cartItems.map((item) => (
               <ThemedCard key={item.product_id} className="flex items-center p-4"> {/* Use ThemedCard here */}
                 <img
-                  src={item.photo_url.startsWith('http') || item.photo_url === "/placeholder.svg" ? item.photo_url : `http://localhost:8000${item.photo_url}`}
+                  src={item.photo_url.startsWith('http') || item.photo_url === "/placeholder.svg" ? item.photo_url : `https://future-makers-market-backend.onrender.com${item.photo_url}`}
                   alt={item.name}
                   className="w-24 h-24 object-cover rounded-md mr-4"
                 />
