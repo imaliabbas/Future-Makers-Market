@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 60% 97%; /* #F0FDF4 */
+    --foreground: 160 80% 17%; /* #064E3B */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 160 80% 17%; /* #064E3B */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 80% 17%;
+
+    --primary: 150 80% 39%; /* #10B981 */
+    --primary-foreground: 150 80% 98%; /* Light green for contrast */
+
+    --secondary: 120 20% 90%; /* Muted green */
+    --secondary-foreground: 160 80% 17%;
+
+    --muted: 120 20% 90%; /* Muted green */
+    --muted-foreground: 160 10% 40%; /* Darker muted green */
+
+    --accent: 120 20% 90%; /* Muted green */
+    --accent-foreground: 160 80% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 10% 80%; /* Soft green border */
+    --input: 120 10% 80%;
+    --ring: 150 80% 39%; /* Primary green ring */
+
+    --radius: 0.5rem;
+
+    /* Glassmorphism variables (kept for other components) */
+    --glass-background: 0 0% 100%; /* Base for hsla */
+    --glass-foreground: 222.2 84% 4.9%;
+    --glass-border: 210 10% 98%; /* Very light grey, almost white */
+  }
+
+  .dark {
+    --background: 160 80% 10%; /* Darker green background */
+    --foreground: 120 60% 97%; /* Light green foreground */
+
+    --card: 160 80% 15%; /* Dark green card */
+    --card-foreground: 120 60% 97%;
+
+    --popover: 160 80% 15%;
+    --popover-foreground: 120 60% 97%;
+
+    --primary: 150 80% 50%; /* Brighter green primary */
+    --primary-foreground: 160 80% 10%;
+
+    --secondary: 160 20% 25%;
+    --secondary-foreground: 120 60% 97%;
+
+    --muted: 160 20% 25%;
+    --muted-foreground: 160 10% 60%;
+
+    --accent: 160 20% 25%;
+    --accent-foreground: 120 60% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 10% 30%;
+    --input: 160 10% 30%;
+    --ring: 150 80% 50%;
+
+    /* Glassmorphism variables for dark mode */
+    --glass-background: 222.2 84% 4.9%;
+    --glass-foreground: 210 40% 98%;
+    --glass-border: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Add a subtle gradient background for the glass effect to stand out */
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    min-height: 100vh; /* Ensure it covers the whole viewport */
+  }
+}
